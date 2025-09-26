@@ -1,0 +1,25 @@
++====================+===================+=====================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                 |
++====================+===================+=====================================+
+| sys_clk_pin        | sys_clk_pin       | draww/vga_b_reg[3]/R                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_b_reg[2]/R                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_b_reg[0]/R                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]/R                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica/R   |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica_2/R |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica_3/R |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica_4/R |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_g_reg[3]_lopt_replica/R   |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[3]/R                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_g_reg[3]/R                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[3]_lopt_replica/R   |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_g_reg[3]_lopt_replica/D   |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_g_reg[3]/D                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[3]_lopt_replica/D   |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[3]/D                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica_2/D |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica/D   |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]/D                |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica_4/D |
+| sys_clk_pin        | sys_clk_pin       | draww/vga_r_reg[1]_lopt_replica_3/D |
++--------------------+-------------------+-------------------------------------+

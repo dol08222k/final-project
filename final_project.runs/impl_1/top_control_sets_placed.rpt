@@ -1,0 +1,115 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Dec 16 12:33:48 2024
+| Host         : DESKTOP-M2F9IJJ running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    37 |
+|    Minimum number of control sets                        |    37 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   118 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    37 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |    10 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              97 |           47 |
+| No           | No                    | Yes                    |               6 |            4 |
+| No           | Yes                   | No                     |             222 |           66 |
+| Yes          | No                    | No                     |              36 |           15 |
+| Yes          | No                    | Yes                    |              40 |           15 |
+| Yes          | Yes                   | No                     |              41 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|               Clock Signal               |               Enable Signal              |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  clkk/clk_pix                            |                                          | blackjack/SR[0]                   |                1 |              1 |         1.00 |
+|  clkk/clk_pix                            |                                          | blackjack/SR[1]                   |                1 |              1 |         1.00 |
+|  db_right_button/db_right                |                                          |                                   |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                           |                                          | blackjack/LED16_R0                |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                           |                                          | blackjack/lose_reg_reg_0          |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                           | blackjack/dealer_score[3]_i_1_n_0        |                                   |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG                           | blackjack/dealer_score[3]_i_1_n_0        | blackjack/dealer_score[1]_i_1_n_0 |                2 |              2 |         1.00 |
+|  clkk/clk_pix                            |                                          |                                   |                3 |              4 |         1.33 |
+|  clkk/clk_pix                            |                                          | dispp/sy_reg[5]_1                 |                1 |              4 |         4.00 |
+|  FSM_sequential_state_reg_reg[4]_i_3_n_0 |                                          | temp/counter[3]_i_1_n_0           |                1 |              4 |         4.00 |
+|  FSM_sequential_state_reg_reg[4]_i_3_n_0 | temp/FSM_sequential_state_reg[4]_i_1_n_0 |                                   |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                           | blackjack/user_score[4]_i_1_n_0          |                                   |                4 |              5 |         1.25 |
+|  clock/clk_reg                           |                                          | db_reset_button/c_reg_0[0]        |                4 |              6 |         1.50 |
+|  clock/clk_reg                           | clock/min0                               | db_reset_button/c_reg_0[0]        |                2 |              6 |         3.00 |
+|  clock/clk_reg                           | clock/hour0                              | db_reset_button/c_reg_0[0]        |                3 |              6 |         2.00 |
+|  clkk/clk_pix                            |                                          | dispp/SR[0]                       |                1 |              6 |         6.00 |
+|  db_left_button/db_left                  | alarm/alarm_hour[5]_i_2_n_0              | alarm/alarm_hour[5]_i_1_n_0       |                1 |              6 |         6.00 |
+|  db_right_button/db_right                | alarm/alarm_hour[5]_i_2_n_0              | alarm/alarm_min[5]_i_1_n_0        |                1 |              6 |         6.00 |
+|  stopwatch/clk_reg_reg_n_0               | stopwatch/st_min[6]_i_1_n_0              | db_reset_button/AR[0]             |                3 |              7 |         2.33 |
+|  stopwatch/clk_reg_reg_n_0               | stopwatch/st_sec[6]_i_1_n_0              | db_reset_button/AR[0]             |                2 |              7 |         3.50 |
+|  stopwatch/clk_reg_reg_n_0               | stopwatch/st_dpsec_0                     | db_reset_button/AR[0]             |                2 |              7 |         3.50 |
+|  stopwatch/clk_reg_reg_n_0               | stopwatch/st_hour[6]_i_1_n_0             | db_reset_button/AR[0]             |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG                           |                                          | temp/clk_reg_200kHz               |                2 |              8 |         4.00 |
+|  FSM_sequential_state_reg_reg[4]_i_3_n_0 |                                          | temp/count[11]_i_1_n_0            |                3 |             11 |         3.67 |
+|  clkk/clk_pix                            | dispp/sy_0                               | clkk/SR[0]                        |                5 |             11 |         2.20 |
+|  db_reset_button/db_reset                | alarm/alarm_hour[5]_i_2_n_0              |                                   |                4 |             12 |         3.00 |
+|  FSM_sequential_state_reg_reg[4]_i_3_n_0 | temp/temp_data_reg                       |                                   |                3 |             12 |         4.00 |
+|  FSM_sequential_state_reg_reg[4]_i_3_n_0 |                                          |                                   |                7 |             15 |         2.14 |
+|  clkk/clk_pix                            |                                          | dispp/sx[9]_i_1_n_0               |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG                           | db_down_button/state_reg_reg[0]          | clock/led0                        |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                           |                                          | db_reset_button/state_reg_reg[0]  |                5 |             19 |         3.80 |
+|  clk_IBUF_BUFG                           |                                          | sound/count                       |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG                           |                                          | db_reset_button/state_reg_reg[1]  |                7 |             26 |         3.71 |
+|  clk_IBUF_BUFG                           |                                          | sound/t_gH/r_784Hz                |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                           |                                          | sound/t_gL/r_392Hz                |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                           |                                          | sound/t_cH/r_523Hz                |                9 |             32 |         3.56 |
+|  clk_IBUF_BUFG                           |                                          |                                   |               36 |             78 |         2.17 |
++------------------------------------------+------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+
+
